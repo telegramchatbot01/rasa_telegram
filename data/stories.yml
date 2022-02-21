@@ -1,0 +1,135 @@
+version: "2.0"
+
+stories:
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: say bye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: mood angry
+  steps:
+  - intent: mood_angry
+  - action: utter_mood_angry
+
+- story: what is bigsmile 2 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_is_bigsmile
+  - action: utter_what_is_bigsmile
+
+- story: what is bigsmile 1
+  steps:
+  - intent: what_is_bigsmile
+  - action: utter_what_is_bigsmile
+
+- story: why bigsmile
+  steps:
+  - intent: why_our_company
+  - action: utter_why_our_company
+
+- story: help
+  steps:
+  - intent: help
+  - action: utter_help
+
+
+- story: adress
+  steps:
+  - intent: contacts
+  - action: utter_contacts
+
+- story: human
+  steps:
+  - intent: human_handoff
+  - action: utter_human_handoff
+
+- story: hru
+  steps:
+  - intent: hru
+  - action: utter_hru
+
+- story: les offres
+  steps:
+  - intent: ask_promo
+  - action: query_offers
+
+- story: path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_is_bigsmile
+  - action: utter_what_is_bigsmile
+  - intent: thank
+  - action: utter_goodbye
+
+
+- story: User interrupts the form and doesn't want to continue
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_verification
+  - action: track_code_form
+  - active_loop: track_code_form
+  - intent: deny
+  - action: utter_ask_continue
+  - or: 
+    - intent: deny
+    - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_verification
+  - action: track_code_form
+  - active_loop: track_code_form
+  - slot_was_set:
+    - requested_slot: track_code
+  - slot_was_set:
+    - track_code: MA60683KEF
+  - intent: deny
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_qr_code
+  - action: qr_code_form
+  - active_loop: qr_code_form
+  - slot_was_set:
+    - requested_slot: track_code2
+  - slot_was_set:
+    - track_code2: MAAZKOEAZ5
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: email@email.com
+  - slot_was_set:
+    - requested_slot: null
+  - intent: deny
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: goodbye
+  - action: utter_goodbye

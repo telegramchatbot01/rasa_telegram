@@ -1,0 +1,154 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - thank
+  - bot_challenge
+  - help
+  - out_of_scope
+  - ask_verification
+  - affirm
+  - deny
+  - human_handoff
+  - ask_promo
+  - why_our_company
+  - contacts
+  - bigsmile_adrs
+  - what_is_bigsmile
+  - ask_qr_code
+  - mood_angry
+  - hru
+
+entities:
+  - track_code
+  - track_code2
+
+slots:
+  track_code:
+    type: text
+    influence_conversation: false
+  track_code2:
+    type: text
+    influence_conversation: false
+  email:
+    type: text
+    influence_conversation: false
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+
+responses:
+  utter_greet:
+  - text: "Bonjour, Je suis Chatbot-DS-HD50Z, je reste disponible à repondre à vos questions !"
+
+  utter_what_is_bigsmile:
+  - text: |
+      Bigsmile est un groupe industriel marocain de produits cosmétiques et de mode. La société, créée par Schueller le 30 juillet 1985, est de nos jours devenue un groupe connu sur l'échelle national, numéro un national de l'industrie cosmétique.
+      Connue par : 
+      1. Varièté de produits.
+      2. Prix raisonnables 
+      3. Foux promotions
+      4. Qualité de service 
+      Oops je suis fatigué de l'écriture il y a beaucoup de points forts de Bigsmile. Vous allez découvrir asap!
+    
+
+  utter_bigsmile_adres:
+  - text: "Voici l'adresse de Bigsmile X4JP+PR7, Rabat. Vous trouvez ce lien qui vous guidera directment chez nous https://goo.gl/maps/cNgQzzUTJA2cCzpT6"
+
+  utter_hru: 
+  - text: "Je vais bien, merci !"
+
+  utter_help:
+  - text: "Voici les choses pour lesquelles je peux vous aider :"
+    buttons:
+    - title: "C'est quoi Bigsmile"
+      payload: "/what_is_bigsmile"
+    - title: "Pourquoi Bigsmile"
+      payload: "/why_our_company"
+    - title: "Les dernières offres"
+      payload: "/ask_promo"
+    - title: "Suivre ma commande"
+      payload: "/ask_verification"
+    - title: "Recupérer mon bon de livraison"
+      payload: "/ask_qr_code"
+  
+  utter_contacts:
+  - text: |
+      Pour contact vous trouvrez les caneaux disponibles : 
+      1. email : service@bigsmile.com.
+      2. Fix : (+212) 053 700 000/01/02 
+      3. Tel : (+212) 066 101 222/258 
+
+  utter_why_our_company: 
+  - text: |
+      1. Varièté de produits.
+      2. Prix raisonnables 
+      3. Foux promotions
+      4. Qualité de service 
+    
+  utter_human_handoff:
+  - text: "Je suis plus intélligent que les humains !"
+
+  utter_goodbye:
+  - text: "Bye, à la prochaine !"
+
+  utter_iamabot:
+  - text: "Oui bien sur je suis un robot, chaque jour j'apprends de nouveaux choses !"
+
+  utter_mood_angry:
+  - text: "Veuillez engager votre conversation !"
+
+  utter_ask_track_code:
+  - text: "Quel est votre code de suivi ?"
+
+  utter_ask_track_code2:
+  - text: "Quel est votre code de suivi ?"
+
+  utter_submit:
+  - text: "Je vais chercher votre code, ça ne demande pas beaucoup de temps !"
+
+  utter_track_code:
+  - text: "Le code que vous avez saisi {track_code}."
+
+  utter_resend:
+  - text: "Le code que vous avez saisi {track_code2}, nous allons envoyer un email à {email}."
+
+  utter_ask_continue: 
+  - text: "Arreter le formulaire ?"
+
+  utter_ask_email: 
+  - text: "Votre email s'il vous plait !"
+
+  utter_out_of_scope:
+  - text: "Je peux pas répondre à cette question"
+
+  utter_please_rephrase:
+  - text: Je suis désolé, je n'ai pas bien compris. Pourriez-vous reformuler ? 
+
+actions:
+  - query_codes
+  - query_offers
+  - code_card
+  - validate_track_code_form
+  - validate_qr_code_form
+  - utter_submit
+  - start
+
+forms:
+  track_code_form: 
+    track_code: 
+    - entity: track_code
+      type: from_text
+  qr_code_form: 
+    track_code2: 
+    - entity: track_code2
+      type: from_text
+    email: 
+    - entity: email
+      type: from_text
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

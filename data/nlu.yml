@@ -1,0 +1,471 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hé
+    - Bonjour
+    - Bonsoir
+    - salut
+    - Bonjour
+    - les salutations
+    - Salut
+    - hélico
+    - Salut, robot
+    - Hiee
+    - Hieeeeeeeeeeee
+    - Holà
+    - Ce qui se passe?
+    - Quoi de neuf
+    - Quoi de neuf mon bot
+    - ouais quoi de neuf
+    - Bonjour
+    - hey patron
+    - J'ai dit, hellllllooooo !!!!
+    - Salut tout le monde ;) 
+
+- intent: hru
+  examples: |
+    - labass 
+    - hania 
+    - labass alik 
+    - ça va 
+    - cv
+    - comment est ta matinée jusqu'à présent
+    - comment vas-tu
+    - comment se passe ta journée
+    - Comment vas-tu
+    - Est-ce que tout va bien
+    - Comment ça va
+    - comment ça va
+    - est-ce que tu vas bien
+    - Est-ce que ça va
+    - comment allez-vous
+    - comment allez-vous
+    - tout va bien
+    - Comment vas-tu aujourd'hui
+    - comment allez-vous
+    - comment vous sentez-vous
+    - comment as-tu été
+    - comment c'est
+    - Comment ça va
+    - comment se passe ta journée
+    - Comment se passe ta journée
+    - comment se passe ta soirée
+    - comment s'est passée ta journée
+    - Passes tu une bonne journée
+    - j'espère que ta journée se passe bien
+    - j'espère que vous passez une agréable soirée
+    - Comment va la vie
+    - Je vais bien et vous
+    - comment va ta vie
+    - comment a été votre journée
+    - comment se passe ta matinée
+    - comment s'est passée ta journée
+    - et toi
+    - comment se passe ta journée
+    - comment se passe ta journée
+    - comment se passe ta journée
+    - à quoi ressemblait ta journée
+    - Qu'en est-il de ta journée
+    - comment est ta journée
+    - comment allez vous ce matin
+    - Comment se passe ta journée 
+
+- intent: goodbye
+  examples: |
+    - À un de ces quatre
+    - A plus tard
+    - à plus
+    - euh au revoir
+    - Au revoir
+    - Bye Bye
+    - adios ?
+    - au revoir :P
+    - au revoir robot
+    - Bye Bye
+    - au revoir
+    - au revoir c'était sympa de te parler
+    - te rattraper plus tard
+    - ciao
+    - cya
+    - adieu
+    - au revoir
+    - au revoir robot rasa !
+    - Bonsoir
+    - au revoir
+    - au revoir.
+    - Bonsoir
+    - je te laisse
+    - OK au revoir
+    - à plus tard
+    - à plus
+    - à bientôt
+    - à bientôt . au revoir
+    - prends soin de toi
+    - alors Salut
+    - à plus tard
+    - toodle-oo
+    - goodbye
+    - byebye
+
+- intent: thank
+  examples: |
+    - Merci beaucoup
+    - grand merci
+    - l'apprécier
+    - cool merci
+    - Frais. Merci
+    - Merci robot
+    - Merci pour ça
+    - Merci!
+    - incroyable, merci
+    - cool merci
+    - cool merci
+    - super
+    - grand merci
+    - d'accord merci
+    - parfait, merci
+    - Merci de toute façon
+    - merci beaucoup pour tout
+    - Merci beaucoup
+    - Merci pour l'aide
+    - THX
+    - Oui merci
+    - Merci pour ton information
+    - thanks
+    - thanks alot 
+    - tk u
+    - tnks
+    - gracias
+    - mucha gracias
+    - thankies
+
+- intent: bot_challenge
+  examples: |
+    - Etes-vous un robot?
+    - Êtes-vous un être humain?
+    - est-ce que je parle à un bot?
+    - Est-ce que je parle à un humain?
+    - tu es bien un bot
+    - n'êtes-vous pas un bot
+    - êtes-vous un chatbot
+    - êtes-vous un bot rasa ?
+    - êtes-vous un vrai bot ?
+    - Etes-vous un robot
+    - es-tu ai
+    - es-tu artificielle
+    - êtes-vous une intelligence artificielle
+    - êtes-vous Bot?
+    - êtes-vous rasa bot ?
+    - Es-tu réel
+    - tu es vrai lol
+    - es-tu vraiment un bot
+    - es-tu sûr d'être un bot ?
+    - robot ?
+    - parce que tu es un bot
+    - je suppose que vous êtes un chatbot
+    - oh êtes-vous chatbot?
+    - dis-moi, es-tu un bot?
+    - qu'est-ce que tu es, un bot?
+    - tu es un robot
+    - tu es ai
+    - vous êtes chatbot
+    - tu es un bot
+    - vous robo
+    - Vrai bot alors ?
+    - es-tu vraiment un bbot ?
+
+- intent: help
+  examples: |
+    - J'ai besoin d'aide
+    - en quoi pouvez-vous m'aider
+    - Pouvez-vous m'aider
+    - Que pouvez-vous faire
+    - Je ai besoin d'aide
+    - aide-moi
+    - Pouvez-vous m'aider s'il vous plaît
+    - problème
+    - gros problème
+    - Comment pouvez vous m'aider
+    - Comment tu m'aides ?
+    - Je ai besoin d'aide
+    - Quelles sont mes options
+    - Qu'est-ce que tu sais faire ?
+    - Que puis-je te demander ?
+    - Que puis-je faire?
+    - Que pouvez-vous démontrer
+    - Que peux tu faire pour moi?
+    - Que pouvez-vous faire?
+    - Que pouvez-vous me dire?
+    - Que fais-tu
+    - n'importe quoi d'autre
+    - Il y a-t-il des alternatives?
+    - Puis-je vous demander autre chose ?
+    - pouvez-vous faire autre chose?
+    - Pouvez-vous m'aider?
+    - revenir
+    - frais! puis-je faire autre chose ici?
+    - bonjour que pouvez-vous faire pour moi
+    - aider
+    - aide-moi
+    - Aidez-moi, s'il vous plaît
+    - aide svp
+    - aider?
+    - aide moi 
+
+- intent: out_of_scope
+  examples: |
+    - quelle est la racine carrée de 5
+    - Je veux connaître la météo
+    - Quel est le sens de la vie.
+    - Le réfrigérateur ne fonctionne pas
+    - ma télé ne marche pas
+    - Je veux une pizza
+    - ma machine à laver ne fonctionne pas
+    - En quelle année sommes-nous
+    - commander une pizza
+    - Je veux commander une pizza
+    - Quel temps fait-il aujourd'hui
+    - quelle est la météo
+    - quel âge as-tu?
+    - ajouter deux plus deux
+    - Hdjejene
+    - asd
+    - Titre
+    - que diriez-vous de la prévision
+    - insensé
+    - blague
+    - Puis-je avoir un hamburger?
+    - YouTube peut-il parler ?
+    - Peux-tu me rappeler ?
+    - Pouvez-vous me donner le mot de passe de votre datacenter
+    - Pouvez-vous me donner le mot de passe de votre datacenter ?
+    - Pouvez-vous faire des sandwichs?
+    - Pouvez-vous s'il vous plaît envoyez-moi un uber 
+
+
+- intent: ask_verification
+  examples: |
+    - Je veux vérifier si ma commande a été livrée
+    - quel est le statut de ma commande?
+    - ma commande a-t-il déjà été livrée ?
+    - ma commande est-il en cours ?
+    - Que s'est-il passé avec ma commande ?
+    - Que se passe-t-il avec ma commande que j'ai efectué chez vous ?
+    - Ai-je des commandes en ce moment ?
+    - Puis-je vérifier le statut de mes commandes ?
+    - Vérifier l'état du livraison de ma commande
+    - vérifier l'état des de la livraison
+    - ok, essayez de rechercher ma commande
+    - rechercher le staus de livraison de ma commande
+    - le statut de la livrasion de ma commande
+    - Quel est le statut de la commande que j'ai demandé ?
+    - quel est le statut de ordre
+    - comment se passe mon ordre
+    - une mise à jour sur ma commande ?
+    - J'ai fais une commande la semaine dernière comment ça va maintenant
+    - pouvez-vous vérifier le statut ma commande
+    - le ticket a-t-il déjà été livrée ?
+
+- intent: ask_qr_code
+  examples: |
+    - Je veux recupérer carte qr code
+    - je veux avoir un ticket
+    - qr code
+    - j'ai perdu mon qr code
+    - est ce que je peux recuperer a nouveau mon qr code
+    - je veux recuperer a nouveau mn ticket de suivi
+    - je veux recupere a nouveau mon document
+    - j'ai perdu mon qr code
+    - j'ai perdu mon qr recu
+    - j'ai perdu mon qr receipt
+
+- intent: affirm
+  examples: |
+    - Oui
+    - Oui s'il vous plaît
+    - Oui je voudrais
+    - Je vous en prie
+    - C'est vrai
+    - En effet
+    - Oui s'il vous plaît
+    - Ouais
+    - Bien sur
+    - Oui merci
+    - Ce serait génial
+    - OUI
+    - OUAIS
+    - Oui bien sûr
+    - Ouais
+    - Ouais c'est bien
+    - Ouais!
+    - Ouaip
+    - Oui s'il vous plaît!
+    - Oui j'accepte 
+  
+- intent: deny
+  examples: |
+    - stop
+    - arrete
+    - arreter s'il vous plait
+    - stoooop
+    - Nan
+    - Non merci
+    - pas celui là
+    - n'utilise pas ça
+    - Je t'en prie, non
+    - non ne fais pas ça
+    - non, utilisez ce code
+    - Non plus
+    - Jamais
+    - Ça ne fait rien
+    - Non, merci
+    - Non, pas vraiment.
+    - Non, merci
+    - Non.
+    - Non
+    - Pas vraiment
+    - absolument pas
+    - déclin
+    - définitivement pas
+    - Nier
+    - n / A
+    - non, ça va 
+
+- intent: human_handoff
+  examples: |
+    - je veux un humain
+    - puis-je parler à un agent
+    - vrai agent s'il vous plaît
+    - vrai humain
+    - discuter avec un agent en direct
+    - donne moi une personne s'il te plait
+    - je veux parler à un humain
+    - pouvez-vous me transférer à un humain ?
+    - remise
+    - parler à un humain
+    - j'ai besoin de parler à un humain
+    - humain s'il vous plait
+    - j'ai besoin de l'aide d'un humain
+    - j'ai besoin de l'aide d'un vrai humain
+    - donne moi un humain
+    - je veux parler à un humain
+    - je veux un représentant
+    - je veux parler à une personne
+
+
+- intent: ask_promo
+  examples: |
+    - quels les nouveautés ?
+    - quoi de neuf?
+    - est ce qu'il y a des nouvelles ?
+    - quels sont les nouvelles annonces?
+    - est ce qu'il y a des annonces recentes ?
+    - quoi de neuf ? 
+    - est ce qu'il ya des nouvelles les promotions
+    - est ce qu'il des nouvelles pormotions que vous proposez
+    - promotions 
+    - les deals 
+    - quels sont vos nouveaux deals
+    - quels sont vos nouvelles promotions
+    - je veux voir vos promotions
+    - est ce qu'il y a des reductions
+    - reduction de prix
+    - quels sont vos dernières offres 
+    - y a t il des nouvelles offres
+    - les offres de bigsmile
+    - les offres de saint valentin 
+
+
+- intent: mood_angry
+  examples: |
+    -Conard 
+    -Putain
+    -tu comprends pas toi 
+    -tete de mule
+    -merde
+    -t'es un con 
+    -con 
+    -stupide
+    -t'es pas intelligent
+    -fuck you 
+    -fuck 
+    -wtf
+    -hmar
+
+- intent: why_our_company
+  examples: |
+    - pourquoi bigsmile ?
+    - est l'institut bigsmile numéro 1 ?
+    - pourquoi devrais-je choisir bigsmile ?
+    - pourquoi bigsmile est bon pour moi ?
+    - pourquoi bigsmile est le meilleur choix pour faire les underwear ?
+    - pourquoi devrais-je commander depuis bigsmile ?
+    - pourquoi le magasin bigsmile ? 
+    - pourquoi choisir bigsmile ?
+    - est ce que bigsmile est le meilleur choix ?
+    - bigsmile est le meilleur choix pour faire les bijoux ?
+    - commander depuis bigsmile est il un bon choix ?
+    - pourquoi bigsmile est le meilleur choix pour faire les produits cosmétiques ?
+    - pourquoi bigsmile est le meilleur choix pour faire les vetements ?
+    - faire le shopping à bigsmile ? 
+
+
+- intent: contacts
+  examples: | 
+    - comment contacter bigsmile ?
+    - ses coordonnées ?
+    - comment se connecter avec bigsmile ?
+    - comment joindre bigsmile ?
+    - le numéro de contact de bigsmile ?
+    - le contact de bigsmile ?
+    - contacter bigsmile 
+    - numéro de téléphone de bigsmile ?
+    - adresse email du service de contact 
+    - contacter bigsmile 
+    - appeler bigsmile 
+    - rester en conctact avec l'bigsmile
+    - le fix de l'bigsmile
+    - les coordonnées de l'bigsmile
+    - comment contacter l'bigsmile ?
+    - je veux contacter l'bigsmile 
+    - je veux parler avec le service clients
+    - je veux poser une question en téléphone 
+    - je veux téléphoner le service des reclamations
+    - j'ai une reclamations
+    - j'ai une reclamation à enregistrer 
+    - je veux faire une reclamation sur le service 
+    - mauvais sercice client 
+    - je veux contacter le directeur
+    - je veux telephoner le service client 
+
+
+- intent: bigsmile_adrs
+  examples: | 
+    - Ou se trouve bigsmile
+    - C'est quoi l'adresse de bigsmile
+    - je veux aller visiter bigsmile 
+    - Je veux rendre visite bigsmile
+    - Ou se trouve bigsmile
+    - est ce que bigsmile est à rabat ?
+    - Comment je peux aller visiter bigsmile ?
+    - Comment je peux déplacer à bigsmile ?
+    - transport à prendre pour aller visister bigsmile ?
+    - déplacer vers bigsmile
+    - rendre viste bigsmile
+    - local de bigsmile
+
+- intent: what_is_bigsmile
+  examples: | 
+    - c'est quoi bigsmile
+    - big smile ?
+    - je veux avoir des informations sur big smile
+    - que veux c'est quoi bigsmile
+    - quel est la mission de bigsmile
+    - que fais bigsmile
+    - quel est le serice offert par bigsmile
+    - quels sont les services offets par bigsmile
+    - je veux savoir les services que vous offerez 
+    - quels sont les types de commandes que je peux effectuer cheez vous 
+    - bigsmile 
