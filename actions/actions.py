@@ -47,7 +47,7 @@ def select_from_where_one(connection, table_name, key, value) :
         rows_dict = dict(zip(columnNames , records))
         return rows_dict
     else : 
-        print("Désolé je peux trouver un laboratoire veuillez choisir un autre titre !")
+        print("Désolé je peux trouver un code veuillez choisir un autre !")
         return None
 
 def select_from_where(connection, table_name, key, value) : 
@@ -67,7 +67,7 @@ def select_from_where(connection, table_name, key, value) :
             ret_array.append(rows_dict)
         return ret_array
     else : 
-        print("Désolé je peux trouver un laboratoire veuillez choisir un autre titre !")
+        print("Désolé je peux trouver un code veuillez choisir un autre !")
         return None
     
 
